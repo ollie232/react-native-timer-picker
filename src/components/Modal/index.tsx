@@ -47,8 +47,8 @@ export const Modal = ({
     const animatedOpacity = useRef(new Animated.Value(0));
 
     const handleDimensionsUpdate = (dimensionsUpdate: any) => {
-        const updatedScreenWidth = dimensionsUpdate.window.width;
-        const updateadScreenHeight = dimensionsUpdate.window.height;
+        var updatedScreenWidth = dimensionsUpdate.windowPhysicalPixels.width;
+        var updateadScreenHeight = dimensionsUpdate.windowPhysicalPixels.height;
         if (
             updatedScreenWidth !== screenWidth ||
             updateadScreenHeight !== screenHeight
